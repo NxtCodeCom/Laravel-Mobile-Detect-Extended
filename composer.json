@@ -11,7 +11,7 @@
     ],
     "autoload": {
         "psr-4": {
-            "NxtCode\\MobileDetect\\": "src/NxtCode/MobileDetect/MobileDetectServiceProvider"
+            "NxtCode\\MobileDetect\\": "src/"
         }
     },
     "extra": {
