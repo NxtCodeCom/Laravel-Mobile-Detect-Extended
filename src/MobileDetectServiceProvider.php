@@ -24,7 +24,11 @@ class MobileDetectServiceProvider extends ServiceProvider
 	 */
 	public function register()
 	{
-		return new \MobileDetect();
+		$this->app['mobile'] = $this->app->share(
+			function ($app) {
+				return new \MobileDetect();
+			}
+		);
 	}
 
 	/**
