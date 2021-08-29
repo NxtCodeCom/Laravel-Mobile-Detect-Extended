@@ -11,16 +11,16 @@
     ],
     "autoload": {
         "psr-4": {
-            "NxtCode\\MobileDetect\\": "src/nxtcode/MobileDetect/MobileDetectServiceProvider"
+            "NxtCode\\MobileDetect\\": "src/MobileDetect/MobileDetectServiceProvider"
         }
     },
     "extra": {
         "laravel": {
             "providers": [
-                "NxtCode\\MobileDetect\\MobileDetectServiceProvider"
+                "NxtCode\\MobileDetect\\MobileDetectServiceProvidere"
             ],
             "aliases": {
-                "MobileDetect": "NxtCode\\MobileDetect\\MobileDetectServiceProvider"
+                "MobileDetect": "NxtCode\\MobileDetect\\MobileDetectServiceProvidert"
             }
         }
     },
