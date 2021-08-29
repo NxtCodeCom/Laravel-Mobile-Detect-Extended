@@ -1,4 +1,4 @@
-<?php namespace MobileDetect;
+<?php namespace NxtCode\MobileDetect;
 
 use Illuminate\Support\ServiceProvider;
 use Detection\MobileDetect;
