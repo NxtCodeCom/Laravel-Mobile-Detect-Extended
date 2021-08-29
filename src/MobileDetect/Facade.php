@@ -1,4 +1,4 @@
-<?php namespace NxtCode\MobileDetect;
+<?php namespace MobileDetect;
 
 class Facade extends \Illuminate\Support\Facades\Facade
 {
