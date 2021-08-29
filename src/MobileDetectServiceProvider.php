@@ -15,7 +15,7 @@ class MobileDetectServiceProvider extends ServiceProvider
 
 	public function boot()
 	{
-		$this->package('nxtcode/mobile-detect');
+		//$this->package('nxtcode/mobile-detect');
 	}
 
 	/**
@@ -24,11 +24,11 @@ class MobileDetectServiceProvider extends ServiceProvider
 	 */
 	public function register()
 	{
-		$this->app['mobile'] = $this->app->share(
-			function ($app) {
-				return new \MobileDetect();
-			}
-		);
+
+		$this->app->singleton('nxtcode/mobile-detect', function ($app) {
+			return new \MobileDetect();
+        });
+	
 	}
 
 	/**
