@@ -9,6 +9,16 @@
             "email": "hello@nxtcode.com"
         }
     ],
+    "extra": {
+        "laravel": {
+            "providers": [
+                "NxtCode\\Minimalist\\MobileDetectServiceProvider"
+            ],
+            "aliases": {
+                "MobileDetect": "NxtCode\\Minimalist\\MobileDetectServiceProvider"
+            }
+        }
+    },
     "require": {
         "php": ">=5.3.0",
         "mobiledetect/mobiledetectlib": "^2.8"
