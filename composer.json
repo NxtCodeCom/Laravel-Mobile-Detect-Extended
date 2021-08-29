@@ -9,6 +9,11 @@
             "email": "hello@nxtcode.com"
         }
     ],
+    "autoload": {
+        "psr-4": {
+            "NxtCode\\MobileDetect\\": "src/nxtcode/MobileDetect/MobileDetectServiceProvider"
+        }
+    },
     "extra": {
         "laravel": {
             "providers": [
