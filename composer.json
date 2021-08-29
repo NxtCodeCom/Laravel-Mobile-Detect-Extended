@@ -9,6 +9,21 @@
             "email": "hello@nxtcode.com"
         }
     ],
+    "autoload": {
+        "psr-4": {
+            "NxtCode\\MobileDetect\\": "src/NxtCode/MobileDetect/MobileDetectServiceProvider"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "NxtCode\\MobileDetect\\MobileDetectServiceProvider"
+            ],
+            "aliases": {
+                "MobileDetect": "NxtCode\\MobileDetect\\MobileDetectServiceProvider"
+            }
+        }
+    },
     "require": {
         "php": ">=5.3.0",
         "mobiledetect/mobiledetectlib": "^2.8"
