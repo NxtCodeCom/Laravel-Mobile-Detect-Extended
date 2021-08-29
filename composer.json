@@ -12,10 +12,10 @@
     "extra": {
         "laravel": {
             "providers": [
-                "NxtCode\\Minimalist\\MobileDetectServiceProvider"
+                "NxtCode\\\MobileDetect\\MobileDetectServiceProvider"
             ],
             "aliases": {
-                "MobileDetect": "NxtCode\\Minimalist\\MobileDetectServiceProvider"
+                "MobileDetect": "NxtCode\\\MobileDetect\\MobileDetectServiceProvider"
             }
         }
     },
