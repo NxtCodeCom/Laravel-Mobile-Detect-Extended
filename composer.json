@@ -1,0 +1,16 @@
+{
+    "name": "nxtcode/mobile-detect",
+    "description": "",
+    "authors": [
+        {
+            "name": "NxtCode",
+            "email": "hello@nxtcode.com"
+        }
+    ],
+    "require": {
+        "php": ">=5.3.0",
+        "mobiledetect/mobiledetectlib": "^2.8",
+        "illuminate/support": "4.x"
+    },
+    "minimum-stability": "dev"
+}
