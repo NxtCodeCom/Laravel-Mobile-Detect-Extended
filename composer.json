@@ -1,6 +1,8 @@
 {
     "name": "nxtcode/mobile-detect",
-    "description": "",
+    "description": "Instant mobile detection.",
+    "keywords": ["laravel", "mobile", "detection", "blade"],
+    "license": "MIT",
     "authors": [
         {
             "name": "NxtCode",
@@ -9,8 +11,7 @@
     ],
     "require": {
         "php": ">=5.3.0",
-        "mobiledetect/mobiledetectlib": "^2.8",
-        "illuminate/support": "4.x"
+        "mobiledetect/mobiledetectlib": "^2.8"
     },
     "minimum-stability": "dev"
 }

@@ -13,7 +13,7 @@ class MobileDetectServiceProvider extends ServiceProvider
 	 */
 	protected $defer = true;
 
-	public function boot(MobileDetect $mobileDetect)
+	public function boot()
 	{
 		$this->package('nxtcode/mobile-detect');
 	}
