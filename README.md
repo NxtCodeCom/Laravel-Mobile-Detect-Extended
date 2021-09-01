@@ -41,14 +41,14 @@ Start by creating an `Service` instance (or use the `Service` Facade if you are 
 ```php
 use NxtCode\Service\Service;
 
-$agent = new Service();
+$tool = new Service();
 ```
 
 If you want to parse user agents other than the current request in CLI scripts for example, you can use the `setUserService` and `setHttpHeaders` methods:
 
 ```php
-$agent->setUserService('Mozilla/5.0 (Macintosh; Intel Mac OS X 10_6_8) AppleWebKit/537.13+ (KHTML, like Gecko) Version/5.1.7 Safari/534.57.2');
-$agent->setHttpHeaders($headers);
+$tool->setUserService('Mozilla/5.0 (Macintosh; Intel Mac OS X 10_6_8) AppleWebKit/537.13+ (KHTML, like Gecko) Version/5.1.7 Safari/534.57.2');
+$tool->setHttpHeaders($headers);
 ```
 
 All of the original [Mobile Detect](https://github.com/serbanghita/Mobile-Detect) methods are still available, check out some original examples at https://github.com/serbanghita/Mobile-Detect/wiki/Code-examples
@@ -58,10 +58,10 @@ All of the original [Mobile Detect](https://github.com/serbanghita/Mobile-Detect
 Check for a certain property in the user agent.
 
 ```php
-$agent->is('Windows');
-$agent->is('Firefox');
-$agent->is('iPhone');
-$agent->is('OS X');
+$tool->is('Windows');
+$tool->is('Firefox');
+$tool->is('iPhone');
+$tool->is('OS X');
 ```
 
 ### Magic is-method
@@ -69,9 +69,9 @@ $agent->is('OS X');
 Magic method that does the same as the previous `is()` method:
 
 ```php
-$agent->isAndroidOS();
-$agent->isNexus();
-$agent->isSafari();
+$tool->isAndroidOS();
+$tool->isNexus();
+$tool->isSafari();
 ```
 
 ### Mobile detection
@@ -79,8 +79,8 @@ $agent->isSafari();
 Check for mobile device:
 
 ```php
-$agent->isMobile();
-$agent->isTablet();
+$tool->isMobile();
+$tool->isTablet();
 ```
 
 ### Match user agent
@@ -88,7 +88,7 @@ $agent->isTablet();
 Search the user agent with a regular expression:
 
 ```php
-$agent->match('regexp');
+$tool->match('regexp');
 ```
 
 Additional Functionality
@@ -99,7 +99,7 @@ Additional Functionality
 Get the browser's accept languages. Example:
 
 ```php
-$languages = $agent->languages();
+$languages = $tool->languages();
 // ['nl-nl', 'nl', 'en-us', 'en']
 ```
 
@@ -108,7 +108,7 @@ $languages = $agent->languages();
 Get the device name, if mobile. (iPhone, Nexus, AsusTablet, ...)
 
 ```php
-$device = $agent->device();
+$device = $tool->device();
 ```
 
 ### Operating system name
@@ -116,7 +116,7 @@ $device = $agent->device();
 Get the operating system. (Ubuntu, Windows, OS X, ...)
 
 ```php
-$platform = $agent->platform();
+$platform = $tool->platform();
 ```
 
 ### Browser name
@@ -124,7 +124,7 @@ $platform = $agent->platform();
 Get the browser name. (Chrome, IE, Safari, Firefox, ...)
 
 ```php
-$browser = $agent->browser();
+$browser = $tool->browser();
 ```
 
 ### Desktop detection
@@ -132,7 +132,7 @@ $browser = $agent->browser();
 Check if the user is using a desktop device.
 
 ```php
-$agent->isDesktop();
+$tool->isDesktop();
 ```
 
 *This checks if a user is not a mobile device, tablet or robot.*
@@ -142,7 +142,7 @@ $agent->isDesktop();
 Check if the user is using a phone device.
 
 ```php
-$agent->isPhone();
+$tool->isPhone();
 ```
 
 ### Robot detection
@@ -150,7 +150,7 @@ $agent->isPhone();
 Check if the user is a robot. This uses [jaybizzle/crawler-detect](https://github.com/JayBizzle/Crawler-Detect) to do the actual robot detection.
 
 ```php
-$agent->isRobot();
+$tool->isRobot();
 ```
 
 ### Robot name
@@ -158,7 +158,7 @@ $agent->isRobot();
 Get the robot name.
 
 ```php
-$robot = $agent->robot();
+$robot = $tool->robot();
 ```
 
 ### Browser/platform version
@@ -166,11 +166,11 @@ $robot = $agent->robot();
 MobileDetect recently added a `version` method that can get the version number for components. To get the browser or platform version you can use:
 
 ```php
-$browser = $agent->browser();
-$version = $agent->version($browser);
+$browser = $tool->browser();
+$version = $tool->version($browser);
 
-$platform = $agent->platform();
-$version = $agent->version($platform);
+$platform = $tool->platform();
+$version = $tool->version($platform);
 ```
 
 *Note, the version method is still in beta, so it might not return the correct result.*
