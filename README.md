@@ -1,4 +1,4 @@
-Agent
+Service
 =====
 
 [![Latest Stable Version](http://img.shields.io/packagist/v/nxtcode/agent.svg)](https://packagist.org/packages/nxtcode/agent) [![Total Downloads](http://img.shields.io/packagist/dm/nxtcode/agent.svg)](https://packagist.org/packages/nxtcode/agent) [![Build Status](http://img.shields.io/travis/nxtcode/agent.svg)](https://travis-ci.org/nxtcode/agent) [![Coverage Status](http://img.shields.io/coveralls/nxtcode/agent.svg)](https://coveralls.io/r/nxtcode/agent) [![Donate](https://img.shields.io/badge/donate-paypal-blue.svg)](https://www.paypal.me/nxtcode)
@@ -24,30 +24,30 @@ Laravel (optional)
 Add the service provider in `config/app.php`:
 
 ```php
-NxtCode\Agent\AgentServiceProvider::class,
+NxtCode\Service\ServiceServiceProvider::class,
 ```
 
-And add the Agent alias to `config/app.php`:
+And add the Service alias to `config/app.php`:
 
 ```php
-'Agent' => NxtCode\Agent\Facades\Agent::class,
+'Service' => NxtCode\Service\Facades\Service::class,
 ```
 
 Basic Usage
 -----------
 
-Start by creating an `Agent` instance (or use the `Agent` Facade if you are using Laravel):
+Start by creating an `Service` instance (or use the `Service` Facade if you are using Laravel):
 
 ```php
-use NxtCode\Agent\Agent;
+use NxtCode\Service\Service;
 
-$agent = new Agent();
+$agent = new Service();
 ```
 
-If you want to parse user agents other than the current request in CLI scripts for example, you can use the `setUserAgent` and `setHttpHeaders` methods:
+If you want to parse user agents other than the current request in CLI scripts for example, you can use the `setUserService` and `setHttpHeaders` methods:
 
 ```php
-$agent->setUserAgent('Mozilla/5.0 (Macintosh; Intel Mac OS X 10_6_8) AppleWebKit/537.13+ (KHTML, like Gecko) Version/5.1.7 Safari/534.57.2');
+$agent->setUserService('Mozilla/5.0 (Macintosh; Intel Mac OS X 10_6_8) AppleWebKit/537.13+ (KHTML, like Gecko) Version/5.1.7 Safari/534.57.2');
 $agent->setHttpHeaders($headers);
 ```
 
@@ -177,7 +177,7 @@ $version = $agent->version($platform);
 
 ## License
 
-Laravel User Agent is licensed under [The MIT License (MIT)](LICENSE).
+Laravel User Service is licensed under [The MIT License (MIT)](LICENSE).
 
 ## Security contact information
 

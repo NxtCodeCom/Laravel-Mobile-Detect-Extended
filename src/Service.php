@@ -78,19 +78,19 @@ class Service extends Mobile_Detect
   
     /**
      * Get the device type
-     * @param null $userAgent
+     * @param null $userService
      * @param null $httpHeaders
      * @return string
      */
-    public function deviceType($userAgent = null, $httpHeaders = null)
+    public function deviceType($userService = null, $httpHeaders = null)
     {
-        if ($this->isDesktop($userAgent, $httpHeaders)) {
+        if ($this->isDesktop($userService, $httpHeaders)) {
             return "desktop";
-        } elseif ($this->isPhone($userAgent, $httpHeaders)) {
+        } elseif ($this->isPhone($userService, $httpHeaders)) {
             return "phone";
-        } elseif ($this->isTablet($userAgent, $httpHeaders)) {
+        } elseif ($this->isTablet($userService, $httpHeaders)) {
             return "tablet";
-        } elseif ($this->isRobot($userAgent)) {
+        } elseif ($this->isRobot($userService)) {
             return "robot";
         }
 
@@ -125,7 +125,7 @@ class Service extends Mobile_Detect
                 $propertyPattern = str_replace('[VER]', self::VER, $propertyMatchString);
 
                 // Identify and extract the version.
-                preg_match(sprintf('#%s#is', $propertyPattern), $this->userAgent, $match);
+                preg_match(sprintf('#%s#is', $propertyPattern), $this->userService, $match);
 
                 if (false === empty($match[1])) {
                     $version = ($type === self::VERSION_TYPE_FLOAT ? $this->prepareVersionNo($match[1]) : $match[1]);

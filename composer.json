@@ -29,7 +29,7 @@
         },
         "laravel": {
             "providers": [
-                "NxtCode\\Service\\AgentServiceProvider"
+                "NxtCode\\Service\\ServiceServiceProvider"
             ],
             "aliases": {
                 "Service": "NxtCode\\Service\\Facades\\Service"
