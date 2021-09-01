@@ -4,7 +4,7 @@ namespace NxtCode\Service;
 
 use Illuminate\Support\ServiceProvider;
 
-class ServiceServiceProvider extends ServiceProvider
+class NxtCodeServiceProvider extends ServiceProvider
 {
     /**
      * Indicates if loading of the provider is deferred.
