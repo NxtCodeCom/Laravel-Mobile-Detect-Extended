@@ -6,7 +6,7 @@ Service
 A PHP desktop/mobile user agent parser with support for Laravel, based on [Mobile Detect](https://github.com/serbanghita/Mobile-Detect) with desktop support and additional functionality.
 
 <p align="center">
-<img src="https://nxtcode.com/static/media/agent.png" height="275">
+<img src="https://www.nxtcode.com/webassets/img/behance.png" height="275">
 </p>
 
 Installation

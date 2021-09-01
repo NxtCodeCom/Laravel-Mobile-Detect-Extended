@@ -32,7 +32,7 @@
                 "NxtCode\\Service\\NxtCodeServiceProvider"
             ],
             "aliases": {
-                "Service": "NxtCode\\Service\\Facades\\Service"
+                "NxtCodeService": "NxtCode\\Service\\Facades\\Service"
             }
         }
     },
